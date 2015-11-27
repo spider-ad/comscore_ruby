@@ -18,10 +18,12 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_runtime_dependency "savon", ">= 0.9.7"
+  #s.add_runtime_dependency "savon", ">= 0.9.7"
+  s.add_runtime_dependency "savon", "~>1.2.0"
+  s.add_development_dependency('pry', '~> 0.10.2')
   #s.add_runtime_dependency "activesupport", ">= 3.0.0"
   s.add_runtime_dependency "activesupport"
-  
+
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
   # s.add_runtime_dependency "rest-client"
